@@ -1,8 +1,7 @@
 import streamlit as st
 from components.header import mostrar_header
 from components.footer import mostrar_footer
-from components.cards import mostrar_grilla
-from utils.db import get_proyecto, get_secciones
+from utils.db import get_proyecto
 
 mostrar_header("Introducción")
 

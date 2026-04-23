@@ -27,12 +27,14 @@ def mostrar_header(titulo_pagina=""):
             </a>
         """, unsafe_allow_html=True)
     with col_nav:
-        pages = st.session_state.get("_pages", [None, None, None])
-        n1, n2, n3 = st.columns(3)
+        pages = st.session_state.get("_pages", [None, None, None, None])
+        n1, n2, n3, n4 = st.columns(4)
         with n1:
             st.page_link(pages[0], label="Inicio")
         with n2:
-            st.page_link(pages[1], label="Entregables")
+            st.page_link(pages[1], label="Introducción")
         with n3:
-            st.page_link(pages[2], label="Acerca")
+            st.page_link(pages[2], label="Entregables")
+        with n4:
+            st.page_link(pages[3], label="Acerca")
     st.divider()

@@ -35,14 +35,7 @@ body {
   padding-top: 0.5rem !important;
 }
 
-/* ── Sidebar siempre visible ── */
-[data-testid="stSidebar"] {
-  transform: none !important;
-  min-width: 14rem !important;
-}
-[data-testid="stSidebarCollapseButton"] {
-  display: none !important;
-}
+
 
 /* ── Títulos ── */
 h1 { font-size: 36px; font-weight: 800; color: var(--texto-primario); }
