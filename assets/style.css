@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;800&display=swap');
+
+/* ── Variables oficiales gob.pe ── */
+:root {
+  --azul-primario:   #1363D0;
+  --azul-boton:      #0056AC;
+  --azul-hover:      #184397;
+  --fondo-principal: #F2F9FF;
+  --fondo-alterno:   #EEF3FB;
+  --texto-primario:  #26292E;
+  --texto-alterno:   #555869;
+  --texto-gris:      #979797;
+  --borde:           #DEE3EA;
+  --deshabilitado:   #DEE3EA;
+  --foco-amarillo:   #FFD147;
+  --footer-fondo:    #26292E;
+  --fuente:          'Roboto', sans-serif;
+}
+
+/* ── Base ── */
+body {
+  font-family: var(--fuente);
+  background-color: var(--fondo-principal);
+  color: var(--texto-primario);
+}
+
+/* ── Ocultar barra superior de Streamlit ── */
+[data-testid="stHeader"] {
+  display: none !important;
+}
+[data-testid="block-container"] {
+  padding-top: 0.5rem !important;
+}
+.stMainBlockContainer {
+  padding-top: 0.5rem !important;
+}
+
+/* ── Sidebar siempre visible ── */
+[data-testid="stSidebar"] {
+  transform: none !important;
+  min-width: 14rem !important;
+}
+[data-testid="stSidebarCollapseButton"] {
+  display: none !important;
+}
+
+/* ── Títulos ── */
+h1 { font-size: 36px; font-weight: 800; color: var(--texto-primario); }
+h2 { font-size: 30px; font-weight: 700; color: var(--texto-primario); }
+h3 { font-size: 24px; font-weight: 700; color: var(--texto-primario); }
+h4 { font-size: 20px; font-weight: 700; color: var(--texto-primario); }
+
+/* ── Párrafos ── */
+p  { font-size: 16px; font-weight: 400; color: var(--texto-primario); }
+
+/* ── Tarjetas clickeables ── */
+div[data-testid="stButton"] button {
+  background: white !important;
+  border: 1px solid #DEE3EA !important;
+  border-radius: 8px !important;
+  padding: 16px 20px !important;
+  text-align: left !important;
+  justify-content: flex-start !important;
+  align-items: flex-start !important;
+  height: auto !important;
+  min-height: 90px !important;
+  white-space: pre-line !important;
+  color: #26292E !important;
+  font-weight: 400 !important;
+  font-size: 15px !important;
+  line-height: 1.6 !important;
+  transition: border-color 0.2s, box-shadow 0.2s !important;
+  display: flex !important;
+  flex-direction: column !important;
+  width: 100% !important;
+}
+div[data-testid="stButton"] button > div,
+div[data-testid="stButton"] button [data-testid="stMarkdownContainer"],
+div[data-testid="stButton"] button p,
+div[data-testid="stButton"] button span {
+  text-align: left !important;
+  width: 100% !important;
+  margin: 0 !important;
+}
+div[data-testid="stButton"] button:hover {
+  border-color: #1363D0 !important;
+  background: #F2F9FF !important;
+  box-shadow: 0 2px 8px rgba(19, 99, 208, 0.08) !important;
+  color: #1363D0 !important;
+}
+
+/* ── Badges de estado ── */
+.estado-pendiente   { background-color: var(--borde);        color: var(--texto-alterno); }
+.estado-en_progreso { background-color: #E8F2F7;             color: var(--azul-primario); }
+.estado-completado  { background-color: #D4EDDA;             color: #155724;              }
+
+/* ── Footer ── */
+.footer {
+  background-color: var(--footer-fondo);
+  color: #ffffff;
+  font-size: 14px;
+  padding: 24px;
+}
