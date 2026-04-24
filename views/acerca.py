@@ -27,7 +27,7 @@ with col1:
 
 with col2:
     st.markdown("**Despliegue y datos**")
-    st.markdown("- Railway")
+    st.markdown("- Render")
     st.markdown("- JSON / SQLite")
 
 st.markdown("<h3>Estándares de diseño</h3>", unsafe_allow_html=True)
